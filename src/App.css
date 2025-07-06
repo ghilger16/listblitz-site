@@ -1,42 +1,50 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
+.main-container {
+  font-family: "Arial", sans-serif;
   padding: 2rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.hero {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  color: white;
+  padding: 4rem 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cta-button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: white;
+  color: #ff416c;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.cta-button:hover {
+  background: #f0f0f0;
 }
 
-.card {
-  padding: 2em;
+.features {
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.read-the-docs {
-  color: #888;
+.features ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.features li {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+}
+
+footer {
+  margin-top: 4rem;
+  font-size: 0.9rem;
+  color: #666;
 }

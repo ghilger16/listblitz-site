@@ -1,35 +1,48 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import { Routes, Route, Link } from "react-router-dom";
+import Support from "./pages/Support";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+function Home() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
+    <div className="main-container">
+      <header className="hero">
+        <h1>List Blitz</h1>
+        <p>The ultimate party game for fast-paced fun.</p>
+        <a href="#download" className="cta-button">
+          Download Now
         </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+      </header>
+
+      <section className="features">
+        <h2>Why List Blitz?</h2>
+        <ul>
+          <li>🔥 Fun categories like Movies, Food, Music, and more</li>
+          <li>👨‍👩‍👧‍👦 Perfect for family game night</li>
+          <li>📱 One phone, everyone plays</li>
+          <li>⏱️ Timed and Chill game modes</li>
+        </ul>
+      </section>
+    </div>
+  );
 }
 
-export default App
+function App() {
+  return (
+    <>
+      <nav className="main-container">
+        <Link to="/">Home</Link> | <Link to="/support">Support</Link>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/support" element={<Support />} />
+      </Routes>
+      <footer className="main-container">
+        <p>
+          &copy; {new Date().getFullYear()} List Blitz. All rights reserved.
+        </p>
+      </footer>
+    </>
+  );
+}
+
+export default App;
