@@ -1,6 +1,7 @@
 import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
 import Support from "./pages/Support";
+import Privacy from "./pages/Privacy";
 
 function Home() {
   return (
@@ -35,10 +36,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/support" element={<Support />} />
+        <Route path="/privacy" element={<Privacy />} />
       </Routes>
       <footer className="main-container">
         <p>
-          &copy; {new Date().getFullYear()} List Blitz. All rights reserved.
+          &copy; {new Date().getFullYear()} List Blitz. All rights reserved. |{" "}
+          <Link to="/privacy">Privacy Policy</Link>
         </p>
       </footer>
     </>
